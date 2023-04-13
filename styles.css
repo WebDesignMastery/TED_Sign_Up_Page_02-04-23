@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+:root {
+  --primary-color: #e52c1a;
+  --primary-color-dark: #d02819;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #efefef;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container__left {
+  flex: 1;
+  background: url("./assets/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__left .title {
+  text-align: center;
+  color: var(--extra-light);
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.container__left img {
+  position: absolute;
+  bottom: 50px;
+  width: 100px;
+}
+
+.container__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content__top,
+.content__bottom {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__logins {
+  display: grid;
+  gap: 20px;
+}
+
+.social__logins .login {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  cursor: pointer;
+}
+
+.login__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  color: var(--extra-light);
+  font-size: 1.5rem;
+}
+
+.apple__login .login__logo {
+  background-color: #000000;
+}
+
+.google__login .login__logo {
+  background-color: #4384f7;
+}
+
+.facebook__login .login__logo {
+  background-color: #3b5799;
+}
+
+.social__logins span {
+  padding: 10px 50px;
+  font-weight: 500;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.divider::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--text-light);
+  z-index: -1;
+}
+
+.divider span {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: #ffffff;
+}
+
+.signup__form {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  display: grid;
+  gap: 1.5rem;
+  color: var(--text-dark);
+}
+
+.signup__form h1 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.form__group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.signup__form label {
+  font-size: 0.8rem;
+}
+
+.signup__form input {
+  display: block;
+  outline: none;
+  border: 1px solid var(--text-light);
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.signup__form .submit__btn {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: var(--extra-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup__form .submit__btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+@media screen and (width < 750px) {
+  .container__left {
+    display: none;
+  }
+}
